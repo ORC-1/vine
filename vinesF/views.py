@@ -27,7 +27,7 @@ from models import video
 from models import users
 from models import UserProfile
 
-# Create your views here.
+
 
 def index(request):
     #RA = str(videoID)
@@ -48,7 +48,7 @@ def Mol(request):
    # template_name = 'vinesF/index.html'
    # context_object_name= 'latest_question_list'
    
-#Injecting data to template trial 1 $$$$$%%%%%
+#Injecting data to template 
 def latest(request):
     Re = video.Date
     Re.sort(order_by = ['-is_recent'])
@@ -57,7 +57,7 @@ def latest(request):
    # Recents = models.vidoe.Date
    # Recent = Recents.extra(order_by = ['-is_recent'])
    
-#Injecting data to template trial 2 $$$$$%%%%%
+#Injecting data to template
 class DetailView(generic.DetailView):
     model = video
     template_name = 'vine/latest.html'
